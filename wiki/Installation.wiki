@@ -1,24 +1,33 @@
 = Installation on Windows =
 ==Prerequisites==
-# This user has to have administrator privilege on the PC.
+  # This user has to have administrator privilege on the PC.
 ==Check Java Version==
-# Check that you have Java version 1.6 or higher installed:
-## Run cmd and type: java -version
+  # Check that you have Java version 1.6 or higher installed:
+  # Open a DOS promt and execute: 
+{{{
+java -version
+}}}
 ==Install Oracle Berkeley DB XML==
-# Download [http://www.oracle.com/technology/software/products/berkeley-db/xml/index.html Oracle Berkeley DB XML],  version 2.5.16. For convenience use the [http://download.oracle.com/otn/berkeley-db/dbxml-2.5.16.msi Windows installer ] or download from V:\ddieditor\OracleBerkeleyDB
-# Set an environment variable '''ORACLE_BERKELEY_DB_XML_HOME''' to the installation directory of Oracle Berkeley DB XML e.g. C:\Programmer\Oracle\Berkley DB XML 2.5.16
-## First check if the enviroment variables have been created by the Windows installer, by executing:
- echo %ORACLE_BERKELEY_DB_XML_HOME%
- echo %PATH%
-# '''Create environment variable'''
- Start -> Indstillinger -> Kontrolpanel -> System
- Select: "Avanceret tab"
- Select "Miljøvariabler"
- Create new user variable select "Ny"
- Variablenavn: ORACLE_BERKELEY_DB_XML_HOME Variableværdi: Oracle Berkeley DB XML install directory e.g. C:\Programmer\Oracle\Berkeley DB XML 2.5.16
-'''Windows comment:''' When changing Oracle Berkeley version - remove path to old version in user environment variable PATH
-# Check that the '''USER'''->'''PATH''' variable is set and pointing to '''%ORACLE_BERKELEY_DB_XML_HOME%\bin'''
+  # *Download* [http://www.oracle.com/technology/software/products/berkeley-db/xml/index.html Oracle Berkeley DB XML],  version 2.5.16. For convenience use the [http://download.oracle.com/otn/berkeley-db/dbxml-2.5.16.msi Windows installer ] or download from V:\ddieditor\OracleBerkeleyDB  
+  # Set an environment variable *ORACLE_BERKELEY_DB_XML_HOME* to the installation directory of Oracle Berkeley DB XML e.g. C:\Programmer\Oracle\Berkley DB XML 2.5.16
+  ## First check if the enviroment variables have been created by the Windows installer, by executing in a DOS prompt:
+{{{
+echo %ORACLE_BERKELEY_DB_XML_HOME%
+echo %PATH%
+}}}
+  # *Create environment variable*
+Start -> Settings -> Control Panel -> System
+Select: "Advanced tab"
+Select "Enviroment Variables"
+
+Create new user variable select 
+New Variable: ORACLE_BERKELEY_DB_XML_HOME 
+Value: Oracle Berkeley DB XML install directory e.g. C:\Programmer\Oracle\Berkeley DB XML 2.5.16
+
+*Windows comment:* When changing Oracle Berkeley version - remove path to old version in user environment variable PATH
+
+5. Check that the *USER*->*PATH* variable is set and pointing to *%ORACLE_BERKELEY_DB_XML_HOME%\bin*
 ==Install DdiEditor==
-# Get DdiEditor from '''V:\ddieditor\Releases''' choose the latest version and choose the '''ddieditor.win32.win32.x86.zip''' file
-# Unzip the file into your program directory e.g. C:\Programmer<br>
-# Run the ddieditor.exe program in the installation directory.<br>
+ # Get DdiEditor from *V:\ddieditor\Releases* choose the latest version and choose the *ddieditor.win32.win32.x86.zip* file
+ # Unzip the file into your program directory e.g. C:\Programmer<br>
+ # Run the ddieditor.exe program in the installation directory.<br>

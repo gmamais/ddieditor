@@ -1,4 +1,4 @@
 #summary Documentation for the DdiEditor Project
-
-* Installation
-* DdiEditor Wiki Syntax
+=Documentation=
+  * [Installation]
+  * [DdiEditorLine Question Import Syntax]

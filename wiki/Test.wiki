@@ -7,7 +7,7 @@ A key objective for development of the DdiEditor is to provide users with a tool
 
 ==Features==
 At the moment the DdiEditor is aimed at data *processing for curation purposes* (accommodating the requirements for a data archive). 
-
+[https://picasaweb.google.com/102572717894488422378/WebCodeGoogleDdieditor#5681945341456766818]
 However, the development project plans to move forward in the direction of providing functionality for the whole data lifecycle. That is *future user groups* will range from *researchers* carrying out a survey to *re-users of data* supplying additional metadata to the original study.  
 
 ==Documentation==

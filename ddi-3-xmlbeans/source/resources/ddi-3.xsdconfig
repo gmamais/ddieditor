@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2011 Danish Data Archive (http://www.dda.dk) 
+
+This program is free software; you can redistribute it and/or modify it 
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either Version 3 of the License, or 
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU Lesser General Public License for more details.
+ 
+You should have received a copy of the GNU Lesser General Public 
+License along with this library; if not, write to the 
+Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, 
+Boston, MA  02110-1301  USA
+The full text of the license is also available on the Internet at 
+http://www.gnu.org/copyleft/lesser.html
+-->
+<xb:config xmlns:xb="http://xml.apache.org/xmlbeans/2004/02/xbean/config">
+	<!--xb:namespace uri="##any">
+    <xb:suffix>XmlBean</xb:suffix>
+  	</xb:namespace-->
+
+	<!-- Map "ddi:*:3_1" namespace to Java package name: 
+		'org.ddialliance.ddi3.xml.xmlbeans.*' -->
+	<xb:namespace uri="ddi:archive:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.archive</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:comparative:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.comparative</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:conceptualcomponent:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.conceptualcomponent</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:datacollection:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.datacollection</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:dataset:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.dataset</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:dcelements:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.dcelements</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:group:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.group</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:instance:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.instance</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:logicalproduct:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.logicalproduct</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:physicaldataproduct:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.physicaldataproduct</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:physicaldataproduct_ncube_inline:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.physicaldataproduct.ncube.inline</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:physicaldataproduct_ncube_normal:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.physicaldataproduct.ncube.normal</xb:package>
+	</xb:namespace>
+		<xb:namespace uri="ddi:physicaldataproduct_ncube_tabular:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.physicaldataproduct.ncube.tabular</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:physicalinstance:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.physicalinstance</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:ddiprofile:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.ddiprofile</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:physicaldataproduct_proprietary:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.physicaldataproduct.proprietary</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:reusable:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.reusable</xb:package>
+	</xb:namespace>
+	<xb:namespace uri="ddi:studyunit:3_1">
+		<xb:package>org.ddialliance.ddi3.xml.xmlbeans.studyunit</xb:package>
+	</xb:namespace></xb:config>

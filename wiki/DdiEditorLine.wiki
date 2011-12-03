@@ -1,0 +1,116 @@
+#DdiEditor Line syntax
+
+=DdiEditor Line=
+DdiEditor Line is a plug-in encapsulating the feature to script DDI-L elements in [http://www.mediawiki.org/wiki/Help:Formatting Mediawiki format] acting as an import tool for the DdiEditor platform. The DDI-L supported elements are devided in two groups. DDI-L elements directly scripted in [http://www.mediawiki.org/wiki/Help:Formatting Mediawiki format] and DDI-L elements that are indirectly created.
+
+==Directly specified DDI-L Elements==
+The following section describes the directly specified DDI-L elements and their Mediawiki syntax.
+
+===Universe===
+When a universe is defined the following defined questions items are related to it.
+{{{
+=Universe Label=Universe Description
+}}}
+
+===Question Scheme===
+When a question scheme is defined the following defined questions items using it as their maintainable element. 
+{{{
+==Question Scheme Label==Question Scheme Description
+}}}
+
+===Question Item===
+{{{
+* V[vari number] Question text
+}}} 
+Note, vari number is the variable identifier that the question item relates to. If a question item has non or more variable relation '''na''' as variable number, may be specified to skip the relation to a variable. Specificly variable number has to be the same unique content defined in a variable name element within the same resource to define a question item and variable relation. 
+
+===Category===
+Categories can be defined or a whole category scheme can be referred.
+
+*Defined:*
+{{{
+** Category text
+}}}
+
+*Referred:*
+{{{
+** [vari number]
+}}}
+Eg: 
+{{{
+** V12
+}}}
+Vari number refers to the question item related to a variable. The referred category scheme is the scheme associated with the code scheme of the variable.
+
+===Multiple Question Item===
+A multiple question item is defined by a start and end enclosing question items.
+{{{
+'''Multiple Question Item Text'''
+* V10 Question Item
+* V11 Question Item
+'''end'''
+}}}
+
+===Statement Item===
+A statement item is defined by
+{{{
+''state'' Statement Item Text
+}}}
+
+===Computation Item===
+A computation item is defined by
+{{{
+''comp'' [boolean expression] [vari number] Label Text
+}}}
+
+*Boolean expresssion* specifies the condition accociated with one to many values of variables and the following expressions:
+  * > greater than
+  * >= equals or greater than
+  * < lesser than
+  * =< equals or greater than
+  * == equals
+  * && AND
+  * || OR
+
+*Vari number* refers to the related variable.
+
+===If Then Else===
+The Control Construct IfThenElse element/ filter. 
+{{{
+''ifthenelse'' [boolean expression] [then vari number] [else vari number] Statement Item Text
+}}}
+
+*Question ref* Is the reference to the if condition question
+
+*Boolean expresssion* specifies the condition accociated with one to many values of variables and the following expressions:
+  * > greater than
+  * >= equals or greater than
+  * < lesser than
+  * =< equals or greater than
+  * == equals
+  * && AND
+  * || OR
+
+*Then vari number* refers to the then question item related to a variable.
+<br><br>
+*Else vari number* refers to the else question item related to a variable. The else reference can be *na*.
+
+{{{
+''ifthenelse'' V2>6&&V12==2}}} V16 na We would like to ask you some more questions regarding online gaming.
+}}}
+ 
+==Indirectly created DDI-L Elements==
+===Concept===
+When a question scheme is defined the question items residing within the question schme are related to a created concept have the same label as the question schme.
+  
+===Category Scheme===
+When one to many categories under a question item are defined they are residing with in a constructed category scheme with a label representing the categories. 
+
+===Question Construct===
+When a question item is defined a corresponding question construct is defined.
+
+===Sequence===
+All question items, multiple questions and if then else constructs are added by reference to a sequence reflecting the logic flow of the survey.
+
+===Universe===
+When an if then else construct is defined the then question item reference is releated to a constructed universe reflecting the filter.

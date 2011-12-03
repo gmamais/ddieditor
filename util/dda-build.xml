@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<project name="util" default="compile" basedir=".">
+
+	<!-- properties -->
+	<property file="${basedir}/build.properties" />
+	<property file="${basedir}/../lib-java/lib.properties" />
+	<property environment="env" />
+
+	<!-- directories -->
+	<property name="src.dir" value="${basedir}/source" />
+	<property name="src.resources.dir" value="${src.dir}/resources" />
+	<property name="testsrc.dir" value="${basedir}/testsource" />
+	<property name="lib.dir" value="${basedir}/../lib-java/" />
+	<property name="build.classes.dir" value="${basedir}/build" />
+	<property name="build.deploy.dir" value="${build.classes.dir}/deploy" />
+	<property name="build.dir.jdoc" value="${build.classes.dir}/javadoc" />
+	<property name="junit.results.dir" value="${build.classes.dir}/junit-reports" />
+
+	<!-- javac arguments -->
+	<property name="javac.debug" value="on" />
+	<property name="javac.deprecation" value="off" />
+	<property name="javac.optimize" value="on" />
+	<property name="javac.depend" value="off" />
+	<property name="javac.verbose" value="off" />
+	<property name="build.compiler.pedantic" value="no" />
+
+	<!-- java args -->
+	<property name="java.heap.init" value="128" />
+	<property name="java.heap.max" value="512" />
+
+	<!-- project class path -->
+	<path id="project.classpath">
+		<fileset dir="${lib.dir}">
+			<include name="junit/${version.junit}/*.jar" />
+			<include name="log4j/${version.log4j}/*.jar" />
+			<include name="xmlbeans/${version.xmlbeans}/*.jar" />
+			<include name="saxon/${version.saxon}/*jar" />
+			<include name="xerecs/${version.xerecs}/*.jar" />
+			<include name="joda-time/${version.joda-time}/*.jar" />
+		</fileset>
+		<fileset dir="${basedir}/../ddi-3-xmlbeans/xmllib">
+			<include name="*.jar" />
+		</fileset>
+		<pathelement path="${build.classes.dir}" />
+		<pathelement path="${testsrc.dir}" />
+		<pathelement location="${src.dir}" />
+	</path>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- clean										 -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="clean" description="Clean up">
+		<delete quiet="true" dir="${build.classes.dir}" />
+	</target>
+
+	<target name="clean-global" depends="clean" description="Clean project and the project distribution dir in lib-java/build">
+		<delete dir="${lib.dir}/build/${xmljar.name}" />
+	</target>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- compile			                         -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="compile" description="Compile the code">
+		<mkdir dir="${build.classes.dir}" />
+		<javac destdir="${build.classes.dir}" classpathref="project.classpath" fork="yes" debug="${javac.debug}" deprecation="${javac.deprecation}" optimize="${javac.optimize}">
+			<src path="${src.dir}" />
+		</javac>
+	</target>
+
+	<target name="resource" description="Setup resources in the build dir">
+		<copy todir="${build.classes.dir}/resources" overwrite="yes">
+			<fileset dir="${src.resources.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+		<mkdir dir="${build.classes.dir}/logs" />
+	</target>
+
+	<target name="jar" depends="compile" description="Generate deploy files for distribution">
+		<mkdir dir="${lib.dir}/build/${xmljar.name}/${xmljar.version}/lib" />
+		<tstamp prefix="build_time">
+			<format property="TSTAMP" pattern="dd.MM.yyyy HH:mm:ss" />
+		</tstamp>
+
+		<!-- jar file -->
+		<jar destfile="${lib.dir}/build/${xmljar.name}/${xmljar.version}/${xmljar.name}.jar">
+			<manifest>
+				<!-- attribute name="Class-Path" value=". lib/log4j/${version.log4j}/log4j-1.2.15.jar lib/saxon/${version.saxon}/saxon8.jar lib/saxon/${version.saxon}/saxon8-dom.jar lib/xmlbeans/${version.xmlbeans}/jsr173_1.0_api.jar lib/xmlbeans/${version.xmlbeans}/resolver.jar lib/xmlbeans/${version.xmlbeans}/xbean.jar lib/xmlbeans/${version.xmlbeans}/xbean_xpath.jar lib/xmlbeans/${version.xmlbeans}/xmlbeans-qname.jar lib/xmlbeans/${version.xmlbeans}/xmlpublic.jar lib/xerecs/${version.xerecs}/xerecsImpl.jar" /-->
+				<section name="Version-Info">
+					<attribute name="Version" value="${xmljar.version}" />
+					<attribute name="Built-Date" value="${build_time.TSTAMP} (dd.MM.yyyy HH:mm:ss)" />
+					<attribute name="Built-By" value="${user.name}" />
+				</section>
+			</manifest>
+
+			<fileset dir="${build.classes.dir}">
+				<include name="**/*.class" />
+				<exclude name="**/*Test*.class" />
+			</fileset>
+		</jar>
+
+		<!-- libaries -->
+		<!--copy todir="${lib.dir}/build/${xmljar.name}/${xmljar.version}/lib">
+			<fileset dir="${lib.dir}">
+				<include name="log4j/${version.log4j}/*.jar" />
+				<include name="xmlbeans/${version.xmlbeans}/*.jar" />
+			</fileset>
+		</copy>
+		<mkdir dir="${build.deploy.dir}/logs" /-->
+	</target>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- junit test									 -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="compile-test" depends="compile, resource" description="Compiles all test code">
+		<javac destdir="${build.classes.dir}" classpathref="project.classpath" fork="yes" debug="${javac.debug}" deprecation="${javac.deprecation}" optimize="${javac.optimize}">
+			<src path="${testsrc.dir}" />
+		</javac>
+	</target>
+
+	<target name="test" depends="compile-test, resource" description="Runs all junit tests">
+		<mkdir dir="${junit.results.dir}" />
+
+		<delete quiet="true">
+			<fileset dir="${junit.results.dir}">
+				<include name="*.xml" />
+			</fileset>
+		</delete>
+
+		<junit fork="yes" forkmode="once" printsummary="yes" haltonfailure="false" dir="${build.classes.dir}">
+			<classpath refid="project.classpath" />
+			<jvmarg value="-Xms${java.heap.init}m" />
+			<jvmarg value="-Xmx${java.heap.max}m" />
+			<batchtest todir="${junit.results.dir}">
+				<fileset dir="${testsrc.dir}">
+					<include name="**/*Test.java" />
+					<exclude name="**/*.class" />
+				</fileset>
+				<formatter type="xml" />
+			</batchtest>
+		</junit>
+	</target>
+
+	<target name="test-report" depends="test" description="Generates JUnit test reports">
+		<junitreport todir="${junit.results.dir}">
+			<fileset dir="${junit.results.dir}">
+				<include name="TEST-*.xml" />
+			</fileset>
+			<report format="frames" todir="${junit.results.dir}" />
+		</junitreport>
+	</target>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- misc										 -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+	<target name="javadoc" description="Compile javadoc">
+		<mkdir dir="${build.dir.jdoc}" />
+		<javadoc sourcepath="${src.dir}" destdir="${build.dir.jdoc}" classpathref="project.classpath" splitindex="true" verbose="true">
+			<fileset dir="${src.dir}">
+				<include name="org/ddiallince/**/*" />
+			</fileset>
+		</javadoc>
+	</target>
+</project>

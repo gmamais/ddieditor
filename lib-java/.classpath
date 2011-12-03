@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="commons/io/2.0/commons-io-2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="commons/lang/2.5/commons-lang-2.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="jamwiki/0.9.3/bliki-core-3.0.12-SNAPSHOT.jar"/>
+	<classpathentry exported="true" kind="lib" path="jamwiki/0.9.3/bliki-parser-0.9.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="jamwiki/0.9.3/jamwiki-core-0.9.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="jug/3.1.0/java-uuid-generator-3.1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="xsom/20100328-nightly/xsom.jar"/>
+	<classpathentry exported="true" kind="lib" path="xsom/20100328-nightly/xsom14.jar"/>
+	<classpathentry exported="true" kind="lib" path="generated/ddi-3-xmlbeans.jar"/>
+	<classpathentry exported="true" kind="lib" path="generated/org.ddialliance.ddieditor.model.xmlbeans.jar"/>
+	<classpathentry exported="true" kind="lib" path="commons/logging/1.1.1/commons-logging-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="aspectj/1.6.1/aspectjrt.jar"/>
+	<classpathentry exported="true" kind="lib" path="aspectj/1.6.1/aspectjweaver.jar"/>
+	<classpathentry exported="true" kind="lib" path="perf4j/0.9.12/perf4j-0.9.12.jar"/>
+	<classpathentry exported="true" kind="lib" path="saxon/9.2.0.2/saxon9he.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="source"/>
+	<classpathentry exported="true" kind="lib" path="commons/jexl/1.1/commons-jexl.jar"/>
+	<classpathentry exported="true" kind="lib" path="jaxen/1.1/jaxen.jar"/>
+	<classpathentry exported="true" kind="lib" path="joda-time/1.6/joda-time.jar"/>
+	<classpathentry exported="true" kind="lib" path="junit/4.4/junit.jar"/>
+	<classpathentry exported="true" kind="lib" path="log4j/1.2.15/log4j-1.2.15.jar"/>
+	<classpathentry exported="true" kind="lib" path="relaxngDatatype/20020414/relaxngDatatype.jar"/>
+	<classpathentry exported="true" kind="lib" path="xalan/2.7.1/serializer.jar"/>
+	<classpathentry exported="true" kind="lib" path="xalan/2.7.1/xalan.jar"/>
+	<classpathentry exported="true" kind="lib" path="xalan/2.7.1/xsltc.jar"/>
+	<classpathentry exported="true" kind="lib" path="xerces/2.9.0/xercesImpl.jar"/>
+	<classpathentry exported="true" kind="lib" path="bdbxml/2.5.13/db.jar"/>
+	<classpathentry exported="true" kind="lib" path="bdbxml/2.5.13/dbxml.jar"/>
+	<classpathentry kind="lib" path="xmlbeans/2.5.0/jsr173_1.0_api.jar"/>
+	<classpathentry kind="lib" path="xmlbeans/2.5.0/resolver.jar"/>
+	<classpathentry kind="lib" path="xmlbeans/2.5.0/xbean_xpath.jar"/>
+	<classpathentry kind="lib" path="xmlbeans/2.5.0/xbean.jar"/>
+	<classpathentry kind="lib" path="xmlbeans/2.5.0/xmlbeans-qname.jar"/>
+	<classpathentry kind="lib" path="xmlbeans/2.5.0/xmlpublic.jar"/>
+	<classpathentry kind="lib" path="picocolo/1.04/piccolo.jar"/>
+	<classpathentry kind="output" path="build"/>
+</classpath>

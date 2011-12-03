@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:ur="ddieditor-urn-relationship-list"
+  targetNamespace="ddieditor-urn-relationship-list" >
+  <xs:element name="UrnRelationhipList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ur:Element" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Element">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ur:Parent" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+      <xs:attribute name="identifiabletype" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Parent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ur:SubParent" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+      <xs:attribute name="identifiabletype" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubParent">
+    <xs:complexType>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+      <xs:attribute name="identifiabletype" use="required" type="xs:string"/>
+      <xs:attribute name="level" type="xs:int" use="required"/> 
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<project name="lib-java" default="resource" basedir=".">
+	<!-- can't use build.properties due to PDE using same file!
+	workaround rename to other name, not done yet. No reason so far
+	property file="${basedir}/build.properties" /-->
+
+	<!-- properties -->
+	<property file="${basedir}/lib.properties" />
+	<property environment="env" />
+
+	<!-- directories -->
+	<property name="src.dir" value="${basedir}/source" />
+	<property name="gen.dir" value="${basedir}/generated" />
+	<property name="build.dir" value="${basedir}/build" />
+	<property name="build.dir.jdoc" value="${build.dir}/javadoc" />
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- clean										 -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="clean" description="Clean up">
+		<delete quiet="true" dir="${build.dir}" />
+		<delete quiet="true" dir="${gen.dir}" />
+	</target>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- resource			                         -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="resource" description="Setup generated jars from other projects">
+		<mkdir dir="${gen.dir}" />
+		<mkdir dir="${build.dir}" />
+
+		<copy todir="${gen.dir}" overwrite="yes" verbose="true">
+			<fileset dir="${basedir}/../ddieditor-xmlbeans/xmllib">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+
+		<copy todir="${gen.dir}" overwrite="yes" verbose="true">
+			<fileset dir="${basedir}/../ddi-3-xmlbeans/xmllib">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- misc										 -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="javadoc" description="Compile javadoc">
+		<mkdir dir="${build.dir.jdoc}" />
+		<javadoc sourcepath="${src.dir}" destdir="${build.dir.jdoc}" classpathref="project.classpath" splitindex="true" verbose="true">
+			<fileset dir="${src.dir}">
+				<include name="org/ddiallince/**/*" />
+			</fileset>
+		</javadoc>
+	</target>
+</project>

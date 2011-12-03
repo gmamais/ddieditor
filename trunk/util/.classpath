@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="source"/>
+	<classpathentry kind="src" path="testsource"/>
+	<classpathentry exported="true" kind="lib" path="build/"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/lib-java/junit/4.4/junit.jar"/>
+	<classpathentry kind="lib" path="/lib-java/xerces/2.9.0/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="/lib-java/joda-time/1.6/joda-time.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/home/ddajvj/download/joda-time-javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="lib" path="/lib-java/xmlbeans/2.4.0/jsr173_1.0_api.jar"/>
+	<classpathentry kind="lib" path="/lib-java/generated/ddi-3-xmlbeans.jar"/>
+	<classpathentry kind="lib" path="/lib-java/xmlbeans/2.5.0/jsr173_1.0_api.jar"/>
+	<classpathentry kind="lib" path="/lib-java/xmlbeans/2.5.0/resolver.jar"/>
+	<classpathentry kind="lib" path="/lib-java/xmlbeans/2.5.0/xbean_xpath.jar"/>
+	<classpathentry kind="lib" path="/lib-java/xmlbeans/2.5.0/xbean.jar"/>
+	<classpathentry kind="lib" path="/lib-java/xmlbeans/2.5.0/xmlbeans-qname.jar"/>
+	<classpathentry kind="lib" path="/lib-java/xmlbeans/2.5.0/xmlpublic.jar"/>
+	<classpathentry kind="output" path="build"/>
+</classpath>

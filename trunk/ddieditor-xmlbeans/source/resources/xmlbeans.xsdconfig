@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xb:config xmlns:xb="http://xml.apache.org/xmlbeans/2004/02/xbean/config">
+	<!--xb:namespace uri="##any">
+    <xb:suffix>XmlBean</xb:suffix>
+  	</xb:namespace-->
+	
+	<xb:namespace uri="ddieditor-lightobject">
+		<xb:package>org.ddialliance.ddieditor.model.lightxmlobject</xb:package>
+	</xb:namespace>
+
+	<xb:namespace uri="ddieditor-urn-relationship-list">
+		<xb:package>org.ddialliance.ddieditor.model.relationship</xb:package>
+	</xb:namespace>
+	
+	<xb:namespace uri="ddieditor-resoure-list">
+		<xb:package>org.ddialliance.ddieditor.model.resource</xb:package>
+	</xb:namespace></xb:config>

@@ -1,4 +1,5 @@
 #summary Documentation for the DdiEditor Project
+#labels Featured
 =Documentation=
   * [Installation]
   * [DdiEditorLine Question Import Syntax]

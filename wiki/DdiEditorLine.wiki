@@ -1,5 +1,3 @@
-#DdiEditor Line syntax
-
 =DdiEditor Line=
 DdiEditor Line is a plug-in encapsulating the feature to script DDI-L elements in [http://www.mediawiki.org/wiki/Help:Formatting Mediawiki format] acting as an import tool for the DdiEditor platform. The DDI-L supported elements are devided in two groups. DDI-L elements directly scripted in [http://www.mediawiki.org/wiki/Help:Formatting Mediawiki format] and DDI-L elements that are indirectly created.
 

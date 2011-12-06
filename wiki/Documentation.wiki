@@ -2,4 +2,5 @@
 #labels Featured
 =Documentation=
   * [Installation]
-  * [DdiEditorLine Question Import Syntax]
+  * [http://code.google.com/p/ddieditor/downloads/detail?name=User%20Manual%20for%20DdiEditor%20by%20DDA-1.0.17.pdf&can=2&q=#makechanges User Manual for DdiEditor]
+    * [DdiEditorLine Question Import Syntax]

@@ -4,7 +4,7 @@
 =Installation=
 ==Check Java Version==
   # Check that you have Java version 1.6 or higher installed:
-  # Open a DOS promt and execute: 
+  # Open a DOS promt/ shell and execute: 
 {{{
 java -version
 }}}

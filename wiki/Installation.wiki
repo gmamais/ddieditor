@@ -1,15 +1,20 @@
 #labels Featured
-= Installation on Windows =
-==Prerequisites==
-  # This user has to have administrator privilege on the PC.
+#sidebar TableOfContents
+
+=Installation=
 ==Check Java Version==
   # Check that you have Java version 1.6 or higher installed:
   # Open a DOS promt and execute: 
 {{{
 java -version
 }}}
-==Install Oracle Berkeley DB XML==
-  # *Download* [http://www.oracle.com/technology/software/products/berkeley-db/xml/index.html Oracle Berkeley DB XML],  version 2.5.16. For convenience use the [http://download.oracle.com/otn/berkeley-db/dbxml-2.5.16.msi Windows installer ] or download from V:\ddieditor\OracleBerkeleyDB  
+
+==Installation on Windows==
+===Prerequisites===
+  # This user has to have administrator privilege on the PC.
+
+===Install Oracle Berkeley DB XML===
+  # *Download* [http://www.oracle.com/technology/software/products/berkeley-db/xml/index.html Oracle Berkeley DB XML],  version 2.5.16. For convenience use the [http://download.oracle.com/otn/berkeley-db/dbxml-2.5.16.msi Windows installer ]
   # Set an environment variable *ORACLE_BERKELEY_DB_XML_HOME* to the installation directory of Oracle Berkeley DB XML e.g. C:\Programmer\Oracle\Berkley DB XML 2.5.16
   ## First check if the enviroment variables have been created by the Windows installer, by executing in a DOS prompt:
 {{{
@@ -28,7 +33,33 @@ Value: Oracle Berkeley DB XML install directory e.g. C:\Programmer\Oracle\Berkel
 *Windows comment:* When changing Oracle Berkeley version - remove path to old version in user environment variable PATH
 
 5. Check that the *USER*->*PATH* variable is set and pointing to *%ORACLE_BERKELEY_DB_XML_HOME%\bin*
-==Install DdiEditor==
- # Get DdiEditor from *[http://code.google.com/p/ddieditor/downloads/list Downloads]* choose the latest ddieditor-x.x.x.win32.win32.x86.zip* file
+
+===Install DdiEditor===
+ # Get DdiEditor from *[http://code.google.com/p/ddieditor/downloads/list Downloads]* choose the latest ddieditor-x.x.x.win32.win32.x86.zip file
  # Unzip the file into your program directory e.g. C:\Programmer<br>
  # Run the ddieditor.exe program in the installation directory.<br>
+
+==Installation on Linux==
+The installation for Linux is tested on Debian based systems.
+
+===Install Oracle Berkeley DB XML===
+  # *Download* [http://www.oracle.com/technology/software/products/berkeley-db/xml/index.html Oracle Berkeley DB XML], version 2.5.16. For convenience use the [http://download.oracle.com/otn/berkeley-db/dbxml-2.5.16.tar.gz Tar.Gz Archive]
+   ## *Extract* dbxml-2.5.16.tar.gz to DBXML_DIR
+  # To work around [https://wiki.edubuntu.org/GCC4.6 GCC4.6 isssues] with XQilla in the DBXml-2.5.16 version *download* [http://sourceforge.net/projects/xqilla/ XQilla-2.3.0]
+   ## *Extract* XQilla-2.3.0.tar.gz to XQILLA_DIR
+  # *Build* DBXml with Java support and XQilla-2.3.0 sources 
+{{{
+cd DBXML_DIR
+./buildall.sh --enable-java --with-xqilla=XQILLA_DIR
+}}}
+  ## *Wait* and watch the logs ...
+
+===Install DdiEditor===
+ # Get DdiEditor from *[http://code.google.com/p/ddieditor/downloads/list Downloads]* choose the latest ddieditor-x.x.x.linux.gtk.x86.zip file
+ # Unzip the file into DDIEDITOR_DIR
+ # By default DdiEditor will be looking for DBXml libaries at /opt/dbxml-2.5.16/install/lib if you do not wish to install DBXml here edit: 
+{{{
+vi DDIEDIOTOR_DIR/ddieditor.ini
+}}}
+to suite the location of DBXML_DIR
+ 4. Execute ddieditor in DDIEDITOR_DIR to launch the DdiEditor 

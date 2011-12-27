@@ -1,5 +1,5 @@
 #labels Featured
-#sidebar TableOfContents
+<wiki:toc max_depth="2" />
 
 =Installation=
 ==Check Java Version==

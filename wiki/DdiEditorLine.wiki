@@ -12,10 +12,28 @@ When a universe is defined the following defined questions items are related to 
 =Universe Label=Universe Description
 }}}
 
+===Sequence===
+A sub-sequence is defined by a start and a end tag enclosing all DDI-L elements supported by the DdiEditor Line module export for sequences.
+{{{
+==[seq-id]==Sequence Label Text
+...
+===end===
+}}} 
+Note: seq-id is the identification of the sequence which may be referred by a ifthenelse element. A sub-sequence must not include a sub-sequence.
+Example:
+{{{
+==seq-a==Question V10, V11 and V12
+* V10 Question Item
+* V11 Question Item
+''ifthenelse'' V10==2 V12 na Please given a answer to question V12
+* V12 Question Item
+==end==
+}}}
+
 ===Question Scheme===
 When a question scheme is defined the following defined questions items using it as their maintainable element. 
 {{{
-==Question Scheme Label==Question Scheme Description
+===Question Scheme Label===Question Scheme Description
 }}}
 
 ===Question Item===
@@ -96,7 +114,7 @@ The Control Construct IfThenElse element/ filter.
 *Else vari number* refers to the else question item related to a variable. The else reference can be *na*.
 
 {{{
-''ifthenelse'' V2>6&&V12==2}}} V16 na We would like to ask you some more questions regarding online gaming.
+''ifthenelse'' V2>6&&V12==2 V16 na We would like to ask you some more questions regarding online gaming.
 }}}
  
 ==Indirectly created DDI-L Elements==

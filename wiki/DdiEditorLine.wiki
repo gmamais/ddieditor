@@ -106,6 +106,7 @@ The Control Construct IfThenElse element/ filter.
   * < lesser than
   * =< equals or greater than
   * == equals
+  * != NOT equals
   * && AND
   * || OR
 

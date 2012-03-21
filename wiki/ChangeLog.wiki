@@ -1,8 +1,9 @@
 #summary Change log for DdiEditor
 
-= Change Log =
+= Change Log = 
+<wiki:toc max_depth="2" />
 
-== DdiEditor-1.2.0 ==
+== Version 1.2.0 ==
 === Features ===
  * DdiEditor Line support for nested ifthenelse now given in wiki file of 
 File->Import->Questions.
@@ -14,7 +15,7 @@ File->Import->Questions.
  * DDIXslt measure support
  * DdiEditor UI DDI-L schema validation feature
 
-== DdiEditor-1.1.0 ==
+== Version 1.1.0 ==
 === Features ===
  * Set no compression on DBXml storage, to speed up queries
  * Added Dynamic View feature

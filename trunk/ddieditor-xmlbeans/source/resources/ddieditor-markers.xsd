@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="ddieditor-marker"
+	xmlns:dm="ddieditor-marker" xmlns:dl="ddieditor-lightobject" elementFormDefault="qualified">
+
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+	<xs:import namespace="ddieditor-lightobject" schemaLocation="ddieditor-lightxmlobject.xsd"/>
+
+	<xs:element name="MarkerList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dm:Resource" maxOccurs="unbounded" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Resource">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dm:Marker" maxOccurs="unbounded" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Marker">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dm:Position" maxOccurs="1" minOccurs="1"/>
+				<xs:element name="Label" type="dm:StringType" maxOccurs="unbounded" minOccurs="0"/>
+				<xs:element name="Description" type="dm:StringType" maxOccurs="unbounded"
+					minOccurs="0"/>
+				<xs:element ref="dm:Note" maxOccurs="unbounded" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="type" type="dm:MarkerType" use="required"/>
+			<xs:attribute name="state" type="dm:StateType" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:simpleType name="MarkerType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SchemaValidation"/>
+			<xs:enumeration value="SecondLevel"/>
+			<xs:enumeration value="BussinessRule"/>
+			<xs:enumeration value="ResearcherQuestion"/>
+			<xs:enumeration value="ResearcherPoi"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="StateType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Fixed"/>
+			<xs:enumeration value="Info"/>
+			<xs:enumeration value="Warning"/>
+			<xs:enumeration value="Error"/>
+			<xs:enumeration value="Fatal"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="Position">
+		<xs:complexType>
+			<xs:choice maxOccurs="1" minOccurs="1">
+				<xs:element ref="dm:XPath"/>
+				<xs:element name="LightXmlObject" type="dl:LightXmlObjectType"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="XPath">
+		<xs:complexType>
+			<xs:attribute name="column" type="xs:int" use="required"/>
+			<xs:attribute name="line" type="xs:int" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="StringType">
+		<xs:attribute ref="xml:lang"/>
+	</xs:complexType>
+
+	<xs:element name="Note">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="dm:StringType">
+					<xs:attribute name="creater" type="dm:RoleType"/>
+					<xs:attribute name="date" type="xs:dateTime"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:simpleType name="RoleType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Curator"/>
+			<xs:enumeration value="Reviewer"/>
+			<xs:enumeration value="Archivist"/>
+			<xs:enumeration value="Researcher"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

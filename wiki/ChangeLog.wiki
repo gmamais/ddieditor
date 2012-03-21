@@ -1,0 +1,19 @@
+#summary Change log for DdiEditor
+
+= Change Log =
+
+== DdiEditor-1.2.0 ==
+=== Features ===
+ * DdiEditor Line support for nested ifthenelse now given in wiki file of 
+File->Import->Questions.
+ * DDA DdiXslt now supports nested ifthenelse.
+ * DDIE-163 - Error in createQuestionScheme corrected.
+ * DDIE-152 - Print is loaded 2 times
+ * DdiEditor SPSS support of long string variables
+ * DdiEditor SPSS support of measure export to DDI-L
+ * DDIXslt measure support
+ * DdiEditor UI DDI-L schema validation feature
+
+=== Infrastructure ===
+ * Refactoring of Respone Type
+ * Perspective Utility implementation

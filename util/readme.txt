@@ -3,7 +3,7 @@ The util module consists of a set of utility class used by other modules
 in the ddieditor framework. 
 
 Legal: 
-Copyright 2012 Danish Data Archive (http://www.dda.dk) 
+Copyright 2009 Danish Data Archive (http://www.dda.dk) 
  
 For all files within util: 
 

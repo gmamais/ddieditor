@@ -14,6 +14,12 @@ File->Import->Questions.
  * DDIXslt measure support
  * DdiEditor UI DDI-L schema validation feature
 
+== DdiEditor-1.1.0 ==
+=== Features ===
+ * Set no compression on DBXml storage, to speed up queries
+ * Added Dynamic View feature
+ * DDI 3.1 style sheet now supports statistics, missing values and data range.
+
 === Infrastructure ===
  * Refactoring of Respone Type
  * Perspective Utility implementation

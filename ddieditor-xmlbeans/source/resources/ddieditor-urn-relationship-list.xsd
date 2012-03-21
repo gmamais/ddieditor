@@ -1,20 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Copyright (c) 2011 Danish Data Archive
-
-Ddieditor-urn-relationship-list XML Schema is free software: you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License as published by the
-Free Software Foundation, either version 3 of the License, or (at your
-option) any later version.
-
-Ddieditor-urn-relationship-list XML Schema is distributed in the hope that it will be useful, but
-WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
-or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
-for more details.
-
-You should have received a copy of the GNU Lesser General Public License along
-with DDI 3.1 XML Schema. If not, see <http://www.gnu.org/licenses/>.
--->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:ur="ddieditor-urn-relationship-list"
   targetNamespace="ddieditor-urn-relationship-list" >
   <xs:element name="UrnRelationhipList">

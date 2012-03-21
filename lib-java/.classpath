@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry exported="true" kind="lib" path="generated/dk.dda.spss.oxml.xmlbeans.jar"/>
+	<classpathentry exported="true" kind="lib" path="commons/collection/3.2.1/commons-collections-3.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="commons/pool/1.6.5/commons-pool-1.5.6.jar"/>
 	<classpathentry exported="true" kind="lib" path="commons/io/2.0/commons-io-2.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="commons/lang/2.5/commons-lang-2.5.jar"/>
 	<classpathentry exported="true" kind="lib" path="jamwiki/0.9.3/bliki-core-3.0.12-SNAPSHOT.jar"/>

@@ -1,16 +1,20 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: DdiEditor Util
-Bundle-SymbolicName: util;singleton:=true
-Bundle-Version: 0.18.0
-Bundle-ClassPath: build/
+Bundle-SymbolicName: util
+Bundle-Version: 0.20.0
+Bundle-ClassPath: .,
+ build/
+Bundle-Activator: org.ddialliance.ddiftp.util.osgi.Activator
+Bundle-Vendor: Danish Data Archive
 Export-Package: org.ddialliance.ddiftp.util,
  org.ddialliance.ddiftp.util.log;uses:="org.apache.log4j",
+ org.ddialliance.ddiftp.util.osgi,
  org.ddialliance.ddiftp.util.xml
 Require-Bundle: lib-java,
  org.eclipse.osgi;bundle-version="3.6.1",
  org.eclipse.ui;bundle-version="3.6.1",
  org.eclipse.core.runtime;bundle-version="3.6.0"
-Import-Package: org.osgi.framework
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Bundle-Vendor: Danish Data Archive
+Import-Package: org.osgi.framework

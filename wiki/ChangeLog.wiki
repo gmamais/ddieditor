@@ -3,6 +3,20 @@
 = Change Log = 
 <wiki:toc max_depth="2" />
 
+== Version 1.3.0 ==
+=== Features ===
+ * Import of CESSDA topics in study topical coverage
+ * Support of multi creator
+ * Creator affiliation support
+ * DDIE-168 - Reimport study universe
+ * DDIE-147 - Insert Scheme causing invalid XML
+ * DDIE-166 - Import of funding information	
+ * DDIE-136 - Study unit editor -scroll down of DDI-L XML tab
+ * DDIE-136 - Proper creation of missing value attribute on SPSS import
+ * DDIE-169 - Print of variable without code scheme but having defined missing codes 
+ * Variable support of missing codes
+ * Text wrap support in frequencies table in DDI-L style sheet 
+
 == Version 1.2.0 ==
 === Features ===
  * DdiEditor Line support for nested ifthenelse now given in wiki file of 

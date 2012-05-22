@@ -3,6 +3,14 @@
 = Change Log = 
 <wiki:toc max_depth="2" />
 
+== Version 1.4.0 ==
+=== Features ===
+ * Validate View improved.
+ * Stylesheet print-time option added - to control frequence table for numeric variables.
+ * Resource Package now supported for Code Schemes.
+ * Missing Values now also printed for numeric variables (if frequence table 
+requested).
+
 == Version 1.3.0 ==
 === Features ===
  * Import of CESSDA topics in study topical coverage

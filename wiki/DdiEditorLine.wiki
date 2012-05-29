@@ -17,7 +17,7 @@ A sub-sequence is defined by a start and a end tag enclosing all DDI-L elements 
 {{{
 ==[seq-id]==Sequence Label Text
 ...
-===end===
+==end==
 }}}
 Note: seq-id is the identification of the sequence. The seq-id must not start by 'V' or 'v'. A sub-sequence will normally be referred to by one or more ifthenelse elements. A sub-sequence must not include another sub-sequence.
 Example:

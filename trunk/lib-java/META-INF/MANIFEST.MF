@@ -2,12 +2,12 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: DdiEditor Lib
 Bundle-SymbolicName: lib-java
-Bundle-Version: 0.12.0
+Bundle-Version: 0.13.0
 Bundle-ClassPath: commons/jexl/1.1/commons-jexl.jar,
  jaxen/1.1/jaxen.jar,
  joda-time/1.6/joda-time.jar,
- junit/4.4/junit.jar,
  log4j/1.2.15/log4j-1.2.15.jar,
+ junit/4.4/junit.jar,
  picocolo/1.04/piccolo.jar,
  relaxngDatatype/20020414/relaxngDatatype.jar,
  xalan/2.7.1/serializer.jar,
@@ -479,7 +479,7 @@ Export-Package: com.bluecast.io,
  repackage,
  schemaorg_apache_xmlbeans.system.s0D9A9BE7ED35C6EE5F315949F7CCECB6,
  schemaorg_apache_xmlbeans.system.s7FB60922C8063DD7A9B370E64194470B,
- schemaorg_apache_xmlbeans.system.s91C9C17E8EABA49FF4E7226A42BEF88F,
+ schemaorg_apache_xmlbeans.system.sC05ABF3F76B308DDBBB4BA91159B2B05,
  schemaorg_apache_xmlbeans.system.sXMLCONFIG,
  schemaorg_apache_xmlbeans.system.sXMLLANG,
  schemaorg_apache_xmlbeans.system.sXMLSCHEMA,

@@ -36,10 +36,11 @@
 				minOccurs="0" />
 		</xs:sequence>
 		<xs:attribute name="element" use="required" type="xs:string" />
-		<xs:attribute name="id" use="required" type="xs:NCName" />
+		<xs:attribute name="agency" use="required" type="xs:string" />
+		<xs:attribute name="id" use="required" type="xs:string" />
 		<xs:attribute name="version" use="optional" type="xs:string" />
-		<xs:attribute name="parentId" use="optional" type="xs:NCName" />
-		<xs:attribute name="parentVersion" use="optional" type="xs:NCName" />
+		<xs:attribute name="parentId" use="optional" type="xs:string" />
+		<xs:attribute name="parentVersion" use="optional" type="xs:string" />
 	</xs:complexType>
 
 	<xs:element name="LightXmlObjectList" type="dl:LightXmlObjectListType" />

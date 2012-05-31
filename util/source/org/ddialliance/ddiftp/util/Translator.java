@@ -437,6 +437,22 @@ public class Translator {
 	}
 
 	/**
+	 * Format first char to upper case rest to lower case
+	 * 
+	 * @param msg
+	 *            to format
+	 * @return result
+	 */
+	public static String firstToUppercase(String msg) {
+		if (msg == null || msg.equals("")) { // guard
+			return msg;
+		}
+		msg = msg.toLowerCase();
+		String first = msg.substring(0, 1).toUpperCase();
+		return first + msg.substring(1);
+	}
+
+	/**
 	 * Format a date to a readable string
 	 * 
 	 * @param date

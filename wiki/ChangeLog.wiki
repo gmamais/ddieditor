@@ -3,6 +3,24 @@
 = Change Log = 
 <wiki:toc max_depth="2" />
 
+== Version 1.4.1 ==
+=== Features ===
+ * New unique study unit and resource package creation with minimal schema requirements
+ * Create/ delete menu implemented on resource element types in menu
+ * Improved question import dialog
+ * DdiEditor-Line support for interviewer instructions
+ * Print of statement item and interviewer instruction
+ * Statement item editor bug fix
+ * Instrument editor bug fix
+ * Validate option on Validate View and auto focus  
+ * Code scheme editor update      	 
+ * Dynamic view code/ category table support for non default category scheme
+ * Print numeric variables with missing codes
+ * Added agency and version support in references on batch meta data creation
+ * Variable-, code-, categoryscheme DAO create bug fix
+ * Concepts fix on numeric variables ingest
+ * Fix of reload of study unit level info
+
 == Version 1.4.0 ==
 === Features ===
  * Validate View improved.

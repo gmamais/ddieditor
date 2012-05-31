@@ -92,6 +92,27 @@ A computation item is defined by
 
 *Vari number* refers to the related variable.
 
+===Interviewer Instruction===
+An interviewer instruction supersedes a question definition and a reference from the question construct is created to the preceding interviewer instructions. 
+
+An interviewer instruction is defined by
+{{{
+ ''interview'' Interviewer Instruction Text [boolean expression]||[na|NA]
+}}}
+''Boolean expresssion'' specifies the condition accociated with one to many values of variables and the following expressions:
+ * > greater than
+ * >= equals or greater than
+ * < lesser than
+ * =< equals or greater than
+ * == equals
+ * && AND
+ * || OR
+
+''NA'' specifies not applicable and can be both upper and lower case.Notice that the ''Boolean expresssion'' or ''NA'' can be empty thus for convenience the following is valid too.
+{{{
+ ''interview'' Interviewer Instruction Text
+}}}
+
 ===If Then Else===
 The Control Construct IfThenElse element/ filter. 
 {{{

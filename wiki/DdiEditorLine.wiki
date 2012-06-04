@@ -93,7 +93,7 @@ A computation item is defined by
 *Vari number* refers to the related variable.
 
 ===Interviewer Instruction===
-An interviewer instruction supersedes a question definition and a reference from the question construct is created to the preceding interviewer instructions. 
+An interviewer instruction supersedes a question definition and a reference from the question construct is created to the *preceding* interviewer instructions. 
 
 An interviewer instruction is defined by
 {{{

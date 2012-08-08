@@ -3,6 +3,12 @@
 = Change Log = 
 <wiki:toc max_depth="2" />
 
+== Version 1.5.0 ==
+=== Features ===
+ * Reference to resource package is now supported for the following components: Code Scheme and Category Scheme.
+ * Error related to import of SPSS statistics for numeric variable has been corrected.
+ * Variable Editor: Response type may now be changed.
+
 == Version 1.4.1 ==
 === Features ===
  * New unique study unit and resource package creation with minimal schema requirements

@@ -113,6 +113,16 @@ An interviewer instruction is defined by
  ''interview'' Interviewer Instruction Text
 }}}
 
+Example:
+{{{
+ ''interview'' Please, tick only one box.
+ ''interview'' Please, tick minimum two boxes NA
+ ''interview'' Please, only tick one box v7>8
+ *V16 Spm. 4. Do you have to meet a fixed deadline?
+ **No
+ **Yes
+}}}
+
 ===If Then Else===
 The Control Construct IfThenElse element/ filter. 
 {{{

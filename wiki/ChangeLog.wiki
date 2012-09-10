@@ -3,6 +3,16 @@
 = Change Log = 
 <wiki:toc max_depth="2" />
 
+== Version 1.6.0 ==
+=== Features ===
+* Minor updates of menus and seperate tools menu added
+* Import questions bugfix
+* Updates on DDA print stylesheet
+* English DDI-L example of the various stages of dataset to DDI-L workflow
+* Create hirachical classification based on CSV file 
+* Export SPSS syntax file based on DDI-L
+* SPSS import change to CVS output data file
+
 == Version 1.5.0 ==
 === Features ===
  * Reference to resource package is now supported for the following components: Code Scheme and Category Scheme.

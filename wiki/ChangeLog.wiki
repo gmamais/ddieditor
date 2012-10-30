@@ -3,6 +3,41 @@
 = Change Log = 
 <wiki:toc max_depth="2" />
 
+== Version 1.7.1 ==
+=== Features ===
+ * Added detailed description on error dialogs
+ * New element name on editor set id bugfix
+ * Deletion of resource bugfix to remove the delete resource in list views
+
+ * IfThenElse Editor -bugfix
+ * CategoryScheme Editor -bugfix
+ * Variable editor  -name label bugfix
+ * CodeScheme Editor fix to lookup rp categories, when selecting rp categories from combobox
+ * Dynamic View -bugfix
+
+ * Print/ Stylesheet General UI updates
+ * Stylesheet DDI documents may now be printed with or without Variable Universe references (print time parameter). The default value is without references.
+ * Stylesheet Line wrapping of long conditions on || and &&
+ * Stylesheet Added support for sequence in sequence list
+ * Stylesheet Added variable link relations for sub universes
+ * Stylesheet Added question/ variable search/ navigation bar from ddixlst support
+ * Stylesheet Added suport for concepts
+
+ * DdiEditor-Line plugin -general bugfix
+ * ElseCondition bugfix
+ * DDIE-189 Fix of wiki question import using defined DDI-L specified creation language
+ * Import wiki wizard busy indicator fix
+ 
+ * JounalStudyInfoExport bugfixes on english title and english subjects
+ * Create Genericode Controled Vocabularies from CSV files
+
+ * XmlBeans upgraded to version 2.6.0
+ * Editor saving bugfix
+ * Editor refactored responcetype
+ * Editor removed dublicate EditorInput also defined by EditorPart
+ * Osiris-to-ddi-l-batch updates
+ * Print function uses XSLT-2.0
+
 == Version 1.6.0 ==
 === Features ===
  * Minor updates of menus and seperate tools menu added

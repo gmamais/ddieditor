@@ -13,7 +13,7 @@ When a universe is defined the following defined questions items are related to 
 }}}
 
 ===Sequence===
-A sub-sequence is defined by a start and a end tag enclosing all DDI-L elements supported by the DdiEditor Line module export for sequences.
+A sequence is defined by a start and a end tag enclosing all DDI-L elements supported by the DdiEditor Line module export for sequences.
 {{{
 ==[seq-id]==Sequence Label Text
 ...

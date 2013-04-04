@@ -63,12 +63,26 @@ Vari number refers to the question item related to a variable. The referred cate
 ===Multiple Question Item===
 A multiple question item is defined by a start and end enclosing question items.
 {{{
-'''Multiple Question Item Text'''
+'''[#Group ID] Multiple Question Item Text'''
 * V10 Question Item
 * V11 Question Item
 '''end'''
 }}}
+A set of Multiple Question Items may be grouped by giving a Group ID. A Group ID has to start with a '#' character. The Group ID is terminated by a space character. A Group ID is optional.
 
+Example:
+{{{
+'''#A1 Question Item Text 1'''
+* V1 Question 1.
+* V2 Question 2.
+'''end'''
+
+'''#A1 Question Item Text 2'''
+* V3 Question 3.
+* V4 Question 4.
+'''end'''
+}}}
+'A1' is the Group ID.
 ===Statement Item===
 A statement item is defined by
 {{{

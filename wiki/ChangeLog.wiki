@@ -3,6 +3,26 @@
 = Change Log = 
 <wiki:toc max_depth="2" />
 
+== Version 1.10.0 ==
+=== New Features ===
+ * Import SPSS option to create measure and categories.
+ * Import SPSS statistiscs option to import one to many OXML files.
+ * Import Correct Encoding Error import option.
+ * Problem Import SPSS File view.
+ * Character Set Validation import option.
+ * Problem Import SPSS Statistics view.
+ * Create Instrumention option.
+ * Reload Question File button
+ * Problem Import Questions view.
+ * Option for suppressing graphics for statistics.
+
+=== Change in Application Infrastructure ===
+ * SPSS import/ export BOM and UTF-8 fix
+ * Export study information from legacy database update
+ * XQuery insert update
+ * DBXml installation not need -DBXml files move to DdiEditor zip file for Windows
+ * Added version stamp in exported study units
+
 == Version 1.7.1 ==
 === Features ===
  * Added detailed description on error dialogs

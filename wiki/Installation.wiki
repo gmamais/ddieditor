@@ -55,7 +55,7 @@ cd DBXML_DIR
   ## *Wait* and watch the logs ...
 
 ===Install DdiEditor===
- # Get DdiEditor from *[http://code.google.com/p/ddieditor/downloads/list Downloads]* choose the latest ddieditor-x.x.x.linux.gtk.x86.zip file
+ # Get DdiEditor from *[https://drive.google.com/?authuser=0#folders/0B8DmOLm957BPUmx3elhfTXZiNEE Downloads]* choose the latest ddieditor-x.x.x.linux.gtk.x86.zip file
  # Unzip the file into DDIEDITOR_DIR
  # By default DdiEditor will be looking for DBXml libaries at /opt/dbxml-2.5.16/install/lib if you do not wish to install DBXml here edit to suite the location of DBXML_DIR 
 {{{

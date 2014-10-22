@@ -35,7 +35,7 @@ Value: Oracle Berkeley DB XML install directory e.g. C:\Programmer\Oracle\Berkel
 5. Check that the *USER*->*PATH* variable is set and pointing to *%ORACLE_BERKELEY_DB_XML_HOME%\bin*
 
 ===Install DdiEditor===
- # Get DdiEditor from *[http://code.google.com/p/ddieditor/downloads/list Downloads]* choose the latest ddieditor-x.x.x.win32.win32.x86.zip file
+ # Get DdiEditor from *[https://drive.google.com/?authuser=0#folders/0B8DmOLm957BPUmx3elhfTXZiNEE Downloads]* choose the latest ddieditor-x.x.x.win32.win32.x86.zip file
  # Unzip the file into your program directory e.g. C:\Programmer<br>
  # Run the ddieditor.exe program in the installation directory.<br>
 
